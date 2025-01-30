@@ -85,7 +85,7 @@ wss.on('connection', (ws) => {
 		if(message.step == 'topStocks') {
 			const selectedExchange = stockData.find(exchange => 
 			  exchange.code?.toLowerCase()?.trim() === message.text?.toLowerCase()?.trim() || 
-			  exchange.stockName?.toLowerCase()?.trim() === message.text?.toLowerCase()?.trim()
+			  exchange.stockExchange?.toLowerCase()?.trim() === message.text?.toLowerCase()?.trim()
 			);
 
 			if (selectedExchange) {
